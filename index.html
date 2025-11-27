@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Modern Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    :root{--bg:#0b0f17;--card:#0f1724;--muted:#9aa4b2;--accent:#ed3a9f;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Arial;color:#e6eef8;background:linear-gradient(180deg,#06070a 0%,#0b0f17 100%);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1200px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo-b{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#4c1d95,#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
+    nav ul{display:flex;gap:16px;list-style:none}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a:hover{color:white;background:rgba(255,255,255,0.03)}
+    .cta{background:linear-gradient(90deg,#e64f8e,#c844ab);padding:10px 14px;border-radius:10px;color:white;font-weight:700;text-decoration:none}
+    .hero{display:flex;align-items:center;gap:28px;margin-top:40px}
+    .hero-left{flex:1}
+    .hero h1{font-size:clamp(28px,5vw,56px);line-height:1.02}
+    .hero p{color:var(--muted);margin-top:10px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:16px;padding:18px;box-shadow:0 10px 40px rgba(2,6,23,.6);border:1px solid rgba(255,255,255,0.03)}
+    .hero-right{width:420px}
+    .profile-img {
+    width: 180px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+    .avatar{width:100%;height:320px;border-radius:12px;background:linear-gradient(180deg,#eb40dc, #d32189);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .sections{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:40px}
+    .skills{display:flex;flex-wrap:wrap;gap:12px}
+    .skill-b{background:var(--glass);padding:10px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .project-b{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    footer{text-align:center;color:var(--muted);margin-top:40px;padding:24px}
+    @media(max-width:900px){.hero{flex-direction:column}.sections{grid-template-columns:1fr}.hero-right{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo-b">T</div>
+        <div>
+          <div style="font-weight:800;color:white">Tehreem</div>
+          <div style="font-size:12px;color:var(--muted)">Web Developer</div>
+        </div>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="cta" href="#contact">Hire Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero" aria-label="dark hero">
+        <div class="hero-left">
+<h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">Hello, I'm <span style="color:var(--accent)">Tehreem</span>.</h1>
+          <p data-aos="fade-up" data-aos-delay="80">I build modern, accessible web experiences. I specialize in web development, animations and performance.</p>
+          <div style="margin-top:18px" data-aos="fade-up" data-aos-delay="160">
+            <a class="cta" href="#projects">View Work</a>
+            <a href="#contact" style="margin-left:10px;color:var(--muted);text-decoration:none;padding:9px 12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03)">Contact</a>
+          </div>
+        </div>
+        <div class="hero-right card" data-aos="zoom-in">
+            <div class="hero-image">
+    <img src="images/modern-muslim-woman-hijab-office-room.jpg" alt="Profile Picture" class="profile-img">
+
+</div>      
+    <div style="display:flex;justify-content:space-between;margin-top:12px;align-items:center">
+            <div>
+              <div style="font-weight:700;color:white">Available for work</div>
+              <div style="font-size:13px;color:var(--muted)">Open to freelance & full-time</div>
+            </div>
+            <div style="text-align:right;color:var(--muted)"><div style="font-weight:800;color:white;font-size:1.05rem">5+</div><div style="font-size:12px">Projects</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sections">
+        <div>
+          <div class="card" style="margin-bottom:18px" data-aos="fade-up">
+            <h3>About</h3>
+            <p style="color:var(--muted);margin-top:8px">I am a web developer with a strong foundation in front-end and back-end development. I enjoy building responsive websites and learning new technologies to improve my skills. My portfolio showcases projects that highlight my dedication to clean design and effective functionality.
+                <br>
+                ⭐Experience with backend technologies like PHP / Laravel.
+                <BR>
+                ⭐Able to create smooth animations, optimized layouts, and dynamic features for better user experience
+            </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="80">
+            <h3>Selected Projects</h3>
+            <div class="projects" style="margin-top:12px">
+              <div class="project-b">E-Commerce (React)</div>
+              <div class="project-b">Productivity App (Vue)</div>
+              <div class="project-b">Design System (CSS)</div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card" data-aos="fade-left">
+            <h4 style="margin-bottom:8px">Skills</h4>
+            <div class="skills">
+              <span class="skill-b">HTML</span>
+              <span class="skill-b">CSS</span>
+              <span class="skill-b">JavaScript</span>
+              <span class="skill-b">React</span>
+              <span class="skill-b">Accessibility</span>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px" data-aos="fade-left" data-aos-delay="80">
+            <h4>Contact</h4>
+            <p style="color:var(--muted);margin-top:8px">tehmeejavaid2020@gmail.com</p>
+   
+
+            <div style="margin-top:10px">
+              <a style="text-decoration:none;margin-right:8px;color:var(--muted)" href="https://github.com/tehmejav09"><i class="fa-brands fa-github" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200"></i></a>
+              <a style="text-decoration:none;margin-right:8px;color:var(--muted)" href="https://www.linkedin.com/in/tehreem-javaid-55495039a/"><i class="fa-brands fa-linkedin" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200"></i></a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" style="margin-top:24px">
+        <h3 style="color:white">Projects</h3>
+        <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+          <div class="project-b" data-aos="zoom-in">Project A — React</div>
+          <div class="project-b" data-aos="zoom-in" data-aos-delay="80">Project B — Vue</div>
+          <div class="project-b" data-aos="zoom-in" data-aos-delay="160">Project C — UI Kit</div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <div class="card" data-aos="fade-up">
+          <h3>Get in touch</h3>
+          <form onsubmit="event.preventDefault();alert('This is a demo contact in the dark theme. Replace with mail service to send messages');" style="margin-top:12px;display:grid;gap:10px">
+            <input placeholder="Name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white">
+            <input placeholder="Email" type="email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white">
+            <textarea placeholder="Message" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white;min-height:110px"></textarea>
+            <button class="cta" style="width:140px">Send</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <small>© <span id="yearB"></span> Tehreem • Built with passion</small>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script> AOS.init({duration:700,once:true}); document.getElementById('yearB').textContent=new Date().getFullYear();
+  // Smooth anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href'); if(t.length>1){ e.preventDefault(); document.querySelector(t).scrollIntoView({behavior:'smooth',block:'start'}); }}));
+  </script>
+</body>
+</html>
